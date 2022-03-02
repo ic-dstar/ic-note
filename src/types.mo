@@ -42,6 +42,11 @@ module {
       topTime: Int;
     };
 
+    public type NoteStat = {
+      noteCount: Nat;
+      boxCount: Nat;
+    };
+
     // smaller -> bigger
     public func compareTimeAsc(a : MetaNoteSort, b : MetaNoteSort) : Order.Order {
         if (a.topTime > 0 and b.topTime > 0) {
