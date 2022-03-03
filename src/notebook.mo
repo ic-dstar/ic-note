@@ -122,6 +122,7 @@ shared({caller}) actor class NoteBook(
 
   // stat notes
   public query({caller}) func statNotes(): async Types.NoteStat {
+    assert(caller == owner_);
     var noteCount : Nat = 0;
     var boxCount : Nat = 0;
     for( note in notes_.vals()) {
